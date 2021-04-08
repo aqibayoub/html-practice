@@ -8,6 +8,9 @@
 	<link rel="stylesheet"  href="css/main.css">
 </head>
 <body>
+	<div class="overlay" id="overlay">
+		<h3> Searching Now</h3>
+	</div>
 	<div class="hero-bg">
 		<section class="top">
 			<header>
@@ -23,7 +26,7 @@
 						<input type="text" name="city" id="city">
 						<P>Example: Hyderabad</P>
 				    </div>
-					<input type="button" value="Find Food Now">
+					<input type="button" value="Find Food Now" id="cta-btn">
 				</form>
 			</div>
 		</section>
@@ -33,8 +36,16 @@
 			<h2>Authentic. Awesome.</h2>
 			<p>lorem ipsum dolor sit amet,conetetur lorem ipsum dolor sit amet,coneteturlorem ipsum dolor sit amet,coneteturlorem ipsum dolor sit amet,coneteturlorem ipsum dolor sit amet,conetetur</p>	
 		</div>
-		<img src="images/food.jpg" alt="food picture in a bowl">
+		<img style="width: 100%;" src="images/food.jpg" alt="food picture in a bowl">
 	</section>
+	<script>
+		
+		let btn = document.getElementById('cta-btn'); 
+		let overlay = document.getElementById('overlay');
+		btn.addEventListener('click',() => {
+			overlay.style.display = 'grid';
+			overlay.classList.add('animate-overlay');
+		})	
+	</script>
 </body>
 </html>
-<!-- Just Dummy Content -->
